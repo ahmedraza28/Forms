@@ -174,9 +174,10 @@ function App() {
           </div>
           <div style={{ marginTop: '15px' }}>
             Get ready to elevate your digital marketing  game          </div>
-          <div style={{ marginTop: '15px', cursor: 'pointer' }}>
-            <a href='https://unimarketingagency.com/' style={{color : '#007bff'}} target='_blank'>unimarketingagency.com</a>
-          </div>
+            <div style={{ marginTop: '15px', cursor: 'pointer' }}>
+  <a href='https://unimarketingagency.com/' style={{color : '#007bff'}} target='_blank' rel="noopener noreferrer">unimarketingagency.com</a>
+</div>
+
         </form>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         {responseData && <ExcelTable data={responseData.data} />}
