@@ -1,38 +1,344 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark background */
+  min-height: 100vh; /* Full height */
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center the form vertically */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+  
+
+
+.logo {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.form {
+  margin: auto;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 8px; /* Rounded corners */
+  background: #2b2b2b; /* Dark background for the form */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.N-box ,
+input,
+button {
+  padding: 15px;
+  margin: 10px 0;
+  /* width: calc(100% - 160px); Adjust width taking padding into account */
+  width: 65%; /* Adjust width taking padding into account */
+  box-sizing: border-box;
+  border-radius: 5px; /* Rounded corners for inputs and button */
+  border: 1px solid #4d4d4d; /* Dark border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+button{
+  width: 100% !important;
+}
+.supporter-div{
+  width: 35% !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.N-box{
+  width: 70% !important;
+  padding: 12px 13px !important; 
+  margin-left: 10px !important;
+}
+
+[data-tooltip-One]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip-One);
+  border: 1px solid #4d4d4d;
+  backdrop-filter: blur(10px);
   color: white;
+  padding: .5em;
+  font-size : 12px;
+  border-radius: 5px;
+  width: 200px;
+  left:120px;
+  cursor : pointer;
+
+}
+[data-tooltip-Two]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip-Two);
+  border: 1px solid #4d4d4d;
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: .5em;
+  font-size : 12px;
+  border-radius: 5px;
+  width: 200px;
+  left:120px;
+  cursor : pointer;
+
+}
+[data-tooltip-Three]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip-Three);
+  border: 1px solid #4d4d4d;
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: .5em;
+  font-size : 12px;
+  border-radius: 5px;
+  width: 200px;
+  left:120px;
+  cursor : pointer;
+
+}
+[data-tooltip-Four]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip-Four);
+  border: 1px solid #4d4d4d;
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: .5em;
+  font-size : 12px;
+  border-radius: 5px;
+  width: 200px;
+  left:120px;
+  cursor : pointer;
+
+}
+[data-tooltip-Five]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip-Five);
+  border: 1px solid #4d4d4d;
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: .5em;
+  font-size : 12px;
+  border-radius: 5px;
+  width: 200px;
+  left:120px;
+  cursor : pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.mark{
+  box-sizing: border-box;
+  border-radius: 50%; /* Rounded corners for inputs and button */
+  border: 1px solid #4d4d4d; /* Dark border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  color: #e0e0e0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #007bff; /* Blue highlight on focus */
+}
+
+input {
+  background-color: #3d3d3d; /* Dark background for inputs */
+}
+
+select[name="objective"] {
+  padding: 15px;
+  margin: 10px 0;
+  width: calc(100% - 30px); /* Adjust width taking padding into account */
+  box-sizing: border-box;
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #4d4d4d; /* Dark border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  color: #e0e0e0; /* Light text color for contrast */
+  background-color: #3d3d3d; /* Dark background for select */
+}
+
+select[name="objective"]:focus {
+  outline: none;
+  border-color: #007bff; /* Blue highlight on focus */
+}
+
+select[name="objective"] option {
+  background-color: #3d3d3d; /* Dark background for options */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+
+select[name="objective"] option:hover {
+  background-color: #4d4d4d; /* Darker shade on hover */
+}
+
+select[name="objective"]::-ms-expand {
+  display: none; /* Hide the default arrow in IE10 and IE11 */
+}
+
+
+input[name="product_description"]::placeholder {
+  color: #808080; /* Placeholder color */
+  font-size: 14px; /* Placeholder font size */
+  position: absolute; /* Position the placeholder */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+}
+
+
+
+input[name="product_description"] {
+  height: 150px; /* Set the height to your desired value */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.error-message {
+  margin-top: 10px;
+  color: #ff0000; /* Red color for error message */
+  font-size: 14px;
+}
+
+textarea {
+  padding: 15px;
+  margin: 10px 0;
+  width: 65%; /* Adjust width taking padding into account */
+  box-sizing: border-box;
+  border-radius: 5px; /* Rounded corners for text areas */
+  border: 1px solid #4d4d4d; /* Dark border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  color: #e0e0e0; /* Light text color for contrast */
+  background-color: #3d3d3d; /* Dark background for text areas */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007bff; /* Blue highlight on focus */
+}
+
+textarea::placeholder {
+  color: #808080; /* Placeholder color */
+  font-size: 14px; /* Placeholder font size */
+}
+
+textarea[name="brandDescription"] {
+  height: 100px; /* Set the height to your desired value */
+}
+
+textarea[name="uniqueSellingPoints"] {
+  height: 200px; /* Set the height to your desired value */
+}
+
+
+button {
+  cursor: pointer;
+  background-color: #007bff; /* Blue background for button */
+  color: white;
+  border: none;
+  font-weight: bold; /* Make the button text bold */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker button shadow */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.response {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #2b2b2b; /* Dark background for response box */
+  border-left: 3px solid #007bff; /* Blue border on the left */
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners for response box */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.App.is-loading {
+  filter: blur(5px); /* Apply a blur effect */
+}
+
+.loading-overlay {
+  position: fixed; /* Use fixed positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: #007bff; /* Blue text color */
+  font-size: 24px;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+
+
+.objective-options {
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+  gap: 10px; /* Spacing between each option for better readability */
+}
+
+.radio-option {
+  display: flex;
+  align-items: center; /* Aligns the radio button and label text vertically */
+  cursor: pointer; /* Changes the cursor to indicate clickable items */
+  color: #e0e0e0; /* Matches your app's light text color */
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 8px; /* Space between the radio button and its label */
+}
+
+/* Customizes the radio buttons to better fit the dark theme */
+.radio-option input[type="radio"] {
+  accent-color: #007bff; /* Changes the color of the radio button */
+}
+
+
+@media screen and (max-width: 670px) {
+ .d-flex{
+  flex-direction: column !important;
+ }
+ .supporter-div , textarea { 
+  width: 100% !important;
+ }
+ .supporter-div{
+  margin-top: 10px !important;
+ }
+ .objective-options{ 
+  width: 100% !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+ }
+ input{
+  width: 100% !important;
+ }
+ .N-box{
+  width: 94% !important;
+ }
 }
