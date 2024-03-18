@@ -311,7 +311,8 @@ pre {
 }
 
 .radio-option input[type="radio"] {
-  margin-right: 8px; /* Space between the radio button and its label */
+  margin-right: 8px; 
+  width: auto !important; /* Use "auto" instead of "none" for width */
 }
 
 /* Customizes the radio buttons to better fit the dark theme */
