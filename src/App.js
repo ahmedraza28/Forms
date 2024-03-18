@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
-// import ExcelTable from './ExcelTable';
+import ExcelTable from './ExcelTable';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ function App() {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        'https://uni-node-deploy-ccf4e9cc3ab0.herokuapp.com/revised-fb-campaign-data',
+        'https://uni-node-github.onrender.com/revised-fb-campaign-data',
         formData
       );
       setResponseData(res.data);
@@ -179,7 +179,7 @@ function App() {
           </div>
         </form>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
-        {/* {responseData && <ExcelTable data={responseData.data} />} */}
+        {responseData && <ExcelTable data={responseData.data} />}
       </main>
     </div>
   );

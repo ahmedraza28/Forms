@@ -1,0 +1,37 @@
+.excel-table {
+  margin-top: 20px;
+  color: #e0e0e0; /* Light text color for contrast */
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #2b2b2b; /* Dark background for the table */
+  color: #e0e0e0; /* Light text color for contrast */
+}
+
+th,
+td {
+  border: 1px solid #4d4d4d; /* Dark border color */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a1a1a; /* Dark background for table headers */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #3d3d3d; /* Darker background for even rows */
+}
+
+tbody tr:hover {
+  background-color: #4d4d4d; /* Darker background on hover */
+  color: #e0e0e0; /* Light text color for contrast */
+}
