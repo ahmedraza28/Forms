@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center; /* Center the form vertically */
   color: #e0e0e0; /* Light text color for contrast */
+  position : relative;
 }
   
 
@@ -276,7 +277,8 @@ pre {
 }
 
 .App.is-loading {
-  filter: blur(5px); /* Apply a blur effect */
+  /* backdrop-filter: blur(5px); */
+  position : relative
 }
 
 .loading-overlay {
@@ -291,7 +293,12 @@ pre {
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
   color: #007bff; /* Blue text color */
   font-size: 24px;
-  z-index: 100; /* Ensure it's above other content */
+  z-index: 100; /* Ensure it's above the blurred content */
+}
+
+/* Ensure that the overlay's text remains visible */
+.loading-overlay * {
+  filter: none; /* Reset any filters applied to child elements */
 }
 
 
@@ -335,6 +342,9 @@ pre {
   width: 100% !important;
   justify-content: space-between !important;
   flex-wrap: wrap;
+  flex-direction: column;
+  
+  
  }
  input{
   width: 100% !important;
