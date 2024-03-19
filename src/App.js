@@ -74,7 +74,7 @@ function App() {
           <div className='d-flex'>
           <div className='supporter-div'>
 
-            <div data-tooltip-Four="We are Pennstate!" className='mark'>?</div>
+            <div data-tooltip-Four="List the interests of your target audience. Think about hobbies, behaviors, tv show, magazines or other pages they might like." className='mark'>?</div>
             <div className='N-box'>Target Interests</div>
             </div>
             <input
